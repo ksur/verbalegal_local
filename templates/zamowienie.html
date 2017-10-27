@@ -1,0 +1,258 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+
+                <h2 class="subpage-h2 blue-line">Wycena tłumaczenia</h2>
+                <hr class="blue">
+                <p class="subpage-intro">
+                    Wypełnij ten formularz i poznaj <mark>szacunkową</mark> wycenę Twojego tłumaczenia.<br/>
+                    <small>Po otrzymaniu zgłoszenia potwierdzimy cenę i przyjęcie zgłoszenia.</small>
+                </p>
+
+
+                <div class="m-formularz-area">
+                    <h3>Formularz wyceny - tłumaczenie pisemne</h3>
+                    <div class="m-space-big"></div>
+                    <form action="/wyslij/" method="post" class="form-horizontal">
+
+                        <div class="form-group">
+                            <label for="id-tlumaczenie-z" class="col-md-3 control-label">Tłumaczenie z języka:</label>
+                            <div class="col-md-4">
+                                <select class="form-control" id="id-tlumaczenie-z" name="tlumaczenie_z">
+                                    <option value="niemiecki">Niemiecki</option>
+                                    <option value="polski">Polski</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id-tlumaczenie-do" class="col-md-3 control-label">na język:</label>
+                            <div class="col-md-4">
+                                <select class="form-control" id="id-tlumaczenie-do" name="tlumaczenie_do">
+                                    <option value="polski">Polski</option>
+                                    <option value="niemiecki">Niemiecki</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-inline">
+                            <label for="id-dane-tekstu" class="col-md-3 control-label">Dane tekstu oryginalnego
+                                według:</label>
+                            <div class="col-md-7">
+                                <select class="form-control" id="id-dane-tekstu" name="dane">
+                                    <option value="liczba_znakow">Liczby znaków ze spacjami</option>
+                                    <option value="liczba_stron">Liczby stron A4</option>
+                                </select>
+
+                            <label for="id-liczba" class="control-label m-spacing-inline"> to: </label>
+
+                                <input ID="id_liczba" type="text" name="liczba_znakow" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id-rodzaj-tlumaczenia" class="col-md-3 control-label">Rodzaj
+                                tłumaczenia:</label>
+                            <div class="col-md-4">
+                                <select class="form-control" id="id-rodzaj-tlumaczenia" name="rodzaj">
+                                    <option value="niemiecki">Normalne</option>
+                                    <option value="polski">Poświadczone</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-8">
+                                <h4>Szacunkowa wycena tłumaczenia: <span ID="id_cena" class="m-spacing-inline m-h4"> _._ zł</span></h4>
+
+                            </div>
+                        </div>
+
+                        <div class="m-space-big"></div>
+                        <h3>Podaj Twoje dane i otrzymaj potwierdzenie zlecenia:</h3>
+                        <div class="m-space-big"></div>
+
+                        <div class="form-group">
+                            <label for="id_imie" class="col-md-3 control-label">Imię:</label>
+                            <div class="col-md-5">
+                                <input ID="id_imie" type="text" name="imie" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_nazwisko" class="col-md-3 control-label">Nazwisko:</label>
+                            <div class="col-md-5">
+                                <input ID="id_nazwisko" type="text" name="nazwisko" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_email" class="col-md-3 control-label">Adres e-mail:</label>
+                            <div class="col-md-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon">@</span>
+                                    <input ID="id_email" type="email" name="email" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+
+                            <label for="id_telefon" class="col-md-3 control-label">Telefon:</label>
+
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-phone"></span></span>
+                                    <input ID="id_telefon" type="tel" name="telefon" class="form-control" required>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-group">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                                        <h4>Dane do faktury
+                            <small>(opcjonalne)</small>
+                        </h4>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_firma" class="col-md-3 control-label">Nazwa firmy:</label>
+                            <div class="col-md-5">
+                                <input ID="id_firma" type="text" name="firma" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_firma_adres" class="col-md-3 control-label">Adres firmy:</label>
+                            <div class="col-md-5">
+                                <input ID="id_firma_adres" type="text" name="firma_adres" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_firma_nip" class="col-md-3 control-label">NIP:</label>
+                            <div class="col-md-4">
+                                <input ID="id_firma_nip" type="text" name="firma_nip" class="form-control" required>
+                            </div>
+                        </div>
+
+                                              <div class="form-group">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                                        <h4>
+                     Dodaj plik i termin tłumaczenia
+                        </h4>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_plik" class="col-md-3 control-label">Wybierz plik do tłumaczenia:</label>
+                            <div class="col-md-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-cloud-upload"></span></span>
+                                    <input ID="id_plik" type="file" name="plik" class="form-control" multiple required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_termin" class="col-md-3 control-label">Preferowany termin
+                                tłumaczenia:</label>
+                            <div class="col-md-3">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span
+                                            class="glyphicon glyphicon-calendar"></span></span>
+                                    <input ID="id_termin" type="date" name="termin" class="form-control" required>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="id_informacje" class="col-md-3 control-label">Opcjonalne dodatkowe
+                                informacje:</label>
+                            <div class="col-md-4">
+                                <textarea id="id_informacje" name="informacje" rows="3" class="form-control"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-md-10">
+                                <div class="checkbox">
+<small>
+                                    <label><input type="checkbox" name="zgoda1" value="zgoda1" required> Wyrażam zgodę
+                                        na przetwarzanie moich danych osobowych na potrzeby kontaktu w celu
+                                        przedstawienia
+                                        oferty tłumaczeń przez Verba Legal z siedzibą Wrocław, zgodnie z ustawą z dnia
+                                        29.09.1997 r. o Ochronie Danych Osobowych Dz. U. nr 133 poz. 883 ze zm.</label>
+                                    <label><input type="checkbox" name="zgoda1" value="goda2" required> Oświadczam, że
+                                        znane mi są obowiązujące „Ogólne warunki zamówienia Verba Legal”. Upoważniam
+                                        Verba Legal do wystawienia faktury VAT bez mojego podpisu.
+                                    </label></small>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <input type="hidden" name="q" value="q">
+                        <input type="hidden" name="cena" value="stara cena" ID="id_cena_input">
+
+                                                   <div class="form-group">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-4">
+                                                       <input class="btn btn-primary btn-lg" type="submit" value="Wyślij zapytanie">
+
+                            </div>
+                        </div>
+
+
+
+
+                    </form>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
+
+{% block javascript %}
+
+    <script>
+
+        $(document).ready(function () {
+            console.log("start");
+            $("#id_liczba").change(function () {
+                console.log($(this).val());
+                var wycena = $(this).val() * 34.00;
+                wycena = wycena + " zł";
+                $("#id_cena").html(wycena);
+                $("#id_cena_input").val(wycena);
+                console.log(wycena);
+            });
+        });
+
+    </script>
+
+{% endblock %}

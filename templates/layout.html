@@ -1,0 +1,174 @@
+{% load static %}
+
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Tłumaczenia prawnicze niemiecki / Verba Lagal Tłumaczenia</title>
+  <meta name="description" content="Tłumaczenia prawnicze język niemiecki">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+  <link rel="stylesheet" href="{% static "css/bootstrap.min.css" %}">
+  <link rel="stylesheet" href="{% static "css/bootstrap-theme.min.css" %}">
+  <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="{% static "css/styles.css" %}">
+
+  <script src="{% static "js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" %}"></script>
+
+</head>
+
+<body>
+  <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+  <!-- top -->
+  {% if request.get_full_path == "/oferta/" %}
+      <div class="container m-top-de">
+  {% elif request.get_full_path == "/onas/" %}
+      <div class="container m-top-onas">
+  {% elif request.get_full_path == "/kontakt/" %}
+      <div class="container m-top-kontakt">
+  {% else %}
+      <div class="container m-top">
+  {% endif %}
+
+    <!-- Static navbar -->
+    <nav class="navbar" role="navigation">
+      <!-- container -->
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+            aria-controls="navbar">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar">___</span>
+                  <span class="icon-bar">___</span>
+                  <span class="icon-bar">___</span>
+                </button>
+          <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static "img/logo_verbalegal.png" %}" class="m-logotype img-responsive" alt="Verba Legal logo"></a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse m-copy-1">
+          <ul class="nav navbar-nav navbar-right m-copy-1">
+            <li><a href="{% url 'home' %}">Start</a></li>
+            <li><a href="{% url 'oferta' %}">Oferta tłumaczeń</a></li>
+            <li><a href="{% url 'onas' %}">O nas</a></li>
+            <li><a href="{% url 'blog' %}">Blog</a></li>
+            <li><a href="{% url 'kontakt' %}">Kontakt</a></li>
+              <li><a href="{% url 'zamowienie' %}">Zamówienie</a></li>
+          </ul>
+        </div>
+      </div>
+      <!-- /container -->
+    </nav>
+    <!--/.navbar-collapse -->
+
+   {% if request.get_full_path == "/oferta/" %}
+        <div class="jumbotron">
+          <h1 class="m-h1">Tłumaczenia język niemiecki</h1>
+        </div>
+   {% elif request.get_full_path == "/onas/" %}
+        <div class="jumbotron">
+          <h1 class="m-h1">O nas</h1>
+        </div>
+   {% elif request.get_full_path == "/kontakt/" %}
+        <div class="jumbotron">
+          <h1 class="m-h1">Kontakt</h1>
+        </div>
+   {% else %}
+       <div class="jumbotron">
+          <h1 class="m-h1">Tłumaczenia prawnicze</h1>
+          <h2 class="m-h2">Wykonujemy profesjonalne tłumaczenia<br> w języku niemieckim</h2>
+        </div>
+   {% endif %}
+
+  </div>
+
+     {% block content %}{% endblock %}
+
+
+
+  <footer id="m-footer">
+     <div class="container">
+       <div class="row m-footer">
+          <div class="col-md-3">
+            <ul>
+                <li><a href="{% url 'home' %}">Start</a></li>
+                <li><a href="{% url 'onas' %}">O nas</a></li>
+                <li><a href="{% url 'blog' %}">Blog</a></li>
+                <li><a href="{% url 'kontakt' %}">Kontakt</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+              <ul>
+                  <li>Tłumaczenia prawnicze</li>
+                  <li><a href="{% url 'oferta' %}">Tłumaczenia język niemiecki</a></li>
+                </ul>
+          </div>
+          <div class="col-md-3">
+
+          </div>
+          <div class="col-md-3">
+              <div class="social-icons-list">
+                <ul>
+                  <li><a href="https://twitter.com/verbalegal" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                  <li><a href="https://www.facebook.com/VERBALEGAL" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                  <li><a href="https://plus.google.com/u/0/112375197425579322736" class="google"><i class="fa fa-google-plus"></i></a></li>
+                </ul>
+              </div>
+          </div>
+
+       </div>
+       <div class="row m-footer">
+         <div class="col-md-12 m-footer-copy">
+            <p>&copy; Verba Legal 2017. Wszelkie prawa zastrzeżone.</p>
+            <p>Właścicielem serwisu jest AnalyticsLab zarejestrowany pod numerem NIP 8951774490, z siedzibą we Wrocławiu.</p>
+         </div>
+       </div>
+     </div>
+
+  </footer>
+
+
+
+
+
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
+  </script>
+
+  <script src="{% static "js/vendor/bootstrap.min.js" %}"></script>
+
+  <script src="{% static "js/main.js" %}"></script>
+
+  {% block javascript %}{% endblock %}
+
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+    (function (b, o, i, l, e, r) {
+      b.GoogleAnalyticsObject = l;
+      b[l] || (b[l] =
+        function () {
+          (b[l].q = b[l].q || []).push(arguments)
+        });
+      b[l].l = +new Date;
+      e = o.createElement(i);
+      r = o.getElementsByTagName(i)[0];
+      e.src = '//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-XXXXX-X', 'auto');
+    ga('send', 'pageview');
+  </script>
+</body>
+
+</html>

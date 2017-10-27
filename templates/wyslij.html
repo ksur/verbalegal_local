@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+
+                <div class="m-space"></div>
+
+
+
+                <div class="m-formularz-area">
+
+                    <h3><mark>Dziękujemy za wysłanie formularza.</mark><br><br>
+                    <small>Nasz konsultant skontaktuje się z Państwem i potwierdzi warunki wykonania tłumaczenia. <br>Po ich akceptacji przejdziemy do realizacji prac.</small>
+                    </h3>
+
+                    {{ message }} - {{ plik }}
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}

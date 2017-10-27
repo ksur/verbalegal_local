@@ -1,0 +1,120 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+<!-- body -->
+<div class="container">
+  <div class="row" id="breadcrumb">
+      <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Tłumaczenia prawnicze niemiecki</a></li>
+          <li class="active">Oferta</li>
+        </ol>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+
+        <h2 class="subpage-h2 blue-line">Jakie dokumenty tłumaczymy?</h2>
+        <hr class="blue">
+        <p class="subpage-intro">
+            Oferujemy Państwu szeroki zakres tłumaczeń, związanych z dokumentami prawnymi, prawniczymi i
+            biznesowymi. Tłumaczymy takie dokumenty, jak:
+        </p>
+
+
+        <div class="row m-lists">
+          <div class="col-md-4">
+            <ul class="m-ul-dot2 m-font-16-bold">
+              <li>umowy</li>
+              <li>pozwy</li>
+              <li>nakazy zapłaty</li>
+              <li>wyroki</li>
+              <li>testamenty</li>
+              <li> oświadczenia</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="m-ul-dot2 m-font-16-bold">
+              <li>wezwania</li>
+              <li>skargi</li>
+              <li> dyplomy</li>
+              <li>certyfikaty</li>
+              <li>wnioski</li>
+              <li>podania</li>
+            </ul>
+          </div>
+          <div class="col-md-4">
+            <ul class="m-ul-dot2 m-font-16-bold">
+                <li>wypowiedzenia</li>
+                <li>listy motywacyjne</li>
+                <li>artykuły naukowe</li>
+                <li> inne</li>
+
+            </ul>
+          </div>
+        </div>
+
+        <p class="subpage-intro">Tłumaczenia wykonujemy w języku: &nbsp; <span class="icon-de">niemieckim</span> oraz &nbsp; <span class="icon-pl">polskim</span>
+            (wszystkie możliwe kombinacje).</p>
+          <div class="m-space"></div>
+            <h2 class="subpage-h2 blue-line">Verba Legal - Tłumaczenia 2 w 1, czyli korzyści dla Państwa</h2>
+            <hr class="blue">
+            <div class="row m-subpage-block-text">
+              <div class="col-md-6 m-font-16-regular">
+                  W Biurze Tłumaczeń Verba Legal doskonale rozumiemy specyfikę tłumaczeń prawnych i prawniczych, dlatego w naszym Zespole pracują dla Państwa zarówno doświadczeni filolodzy, jak i praktykujący prawnicy. <br><br>W jaki sposób Państwo z tego korzystacie? Otóż, nad każdym przesłanym przez Państwa dokumentem pracują zarówno osoby posiadające kompetencje językowe (ukończone studia filologiczne, tytuł zawodowy tłumacza przysięgłego), jak i praktykujący prawnicy (radcowie prawni, adwokaci), aby w ten sposób dać Państwu gwarancję najwyższej jakości wykonanego tłumaczenia.
+              </div>
+              <div class="col-md-6">
+                <img class="img-responsive"  src="{%  static "img/img_tlumaczenia_prawnicze_niemiecki.png"  %}">
+              </div>
+            </div>
+
+            <div class="m-space"></div>
+
+            <h2 class="subpage-h2 blue-line">Nasze usługi i formy współpracy</h2>
+            <hr class="blue">
+            <p class="subpage-intro">
+                Wiemy, że dobra współpraca zaczyna się już na etapie oferty. Z tego względu nasze biuro tłumaczeń
+                oferuje szeroki wybór form współpracy w zakresie usług tłumaczeniowych:
+            </p>
+
+            <ul class="m-ul-v-16">
+                <li>Wykonujemy tłumaczenia zwykłe i poświadczone.</li>
+                <li>Pracujemy na podstawie jednorazowych zleceń i na zasadzie stałej współpracy.</li>
+                <li>Gotowe tłumaczenia przesyłamy elektronicznie (e-mail) lub tradycyjną pocztą (list polecony).</li>
+                <li>Wykonujemy dodatkowe streszczenia tłumaczonego tekstu i prezentacje Power Point.</li>
+                <li>Tłumaczony tekst umieszczamy na oryginalnym papierze firmowym Klienta.</li>
+                <li>... i wiele więcej!</li>
+              </ul>
+
+            <div class="m-space"></div>
+
+            <div class="m-button-send">
+                <button class="btn btn-primary btn-lg" type="button" onclick="location.href='{% url 'kontakt' %}'">Poznaj wycenę i zamów tłumaczenie</button>
+            </div>
+
+            <div class="m-space"></div>
+
+    </div>
+    <div class="col-md-4">
+
+        <div class="m-zero-margin-right">
+            <div class="m-box-4">
+              <h6 class="m-h6-blue">Verba Legal</h6>
+              <div class="hr-line"></div>
+                <p class="m-p-line-bigger">Tłumaczenia prawnicze</p>
+              <p class="m-p-line-bigger">ul. Litewska 6</p>
+              <p class="m-p-line-bigger">51-354 Wrocław</p>
+              <p class="m-p-line-bigger">hello@verbalegal.pl</p>
+            </div>
+          </div>
+
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+

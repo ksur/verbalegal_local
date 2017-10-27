@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+    <!-- body -->
+<div class="container">
+  <div class="row" id="breadcrumb">
+      <ol class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Tłumaczenia Prawnicze Niemiecki</a></li>
+          <li class="active">O Nas</li>
+        </ol>
+  </div>
+  <div class="row">
+    <div class="col-md-8">
+
+<h2 class="subpage-h2 blue-line">Jakie dokumenty tłumaczymy?</h2>
+        <hr class="blue">
+        <p class="subpage-intro">
+          Nasze Biuro Tłumaczeń oferuje Państwu szeroką gamę usług tłumaczeniowych w zakresie języków: angielskiego, niemieckiego, ze specjalizacją na tłumaczenia prawne i prawnicze. 
+        </p>
+        <p class="subpage-intro">
+          Czy podkreślenie naszej specjalizacji ma jakiekolwiek znaczenie? - Tak, ponieważ w przypadku tak ważnych dokumentów, jak:
+        </p>
+
+        <blockquote>
+          <p>umowy, wezwania, regulaminy, pisma procesowe, testamenty,
+            dokumenty urzędowe, pełnomocnictwa, sprawozdania, wypowiedzenia czy oświadczenia
+          </p>
+        </blockquote>
+
+        <p class="subpage-intro">precyzyjne przetłumaczenie każdego słowa, oczywiście przy uwzględnieniu całości kontekstu i sensu (celu) dokumentu,
+          ma ogromne znaczenie</p>
+
+          <p class="subpage-intro">Często nie można bowiem zastąpić jednego słowa innym, jego „prostym” synonimem, który - być może - brzmi dla laika „ładniej”. Wiąże się to ze specyfiką języka prawnego (czyli tego, w którym formułowane jest prawo, np. języka ustaw czy rozporządzeń) i prawniczego (czyli tego, w którym formułowane są wypowiedzi o prawie, np. języka umów czy oświadczeń).</p>
+
+          <blockquote><p>Wysoki stopień sformalizowania, precyzja, złożoność stosowanych pojęć, konieczność posługiwania się definicjami legalnymi czy występujące tu często paremie prawnicze</p></blockquote>
+
+
+<p class="subpage-intro">
+  - to tylko niektóre cechy „prawniczego slangu”. Ich uwzględnienie w tłumaczonym tekście przyczynia się do tego, że tłumaczenie oddaje oryginalny tekst nie tylko w sposób dosłowny, ale również wierny.
+</p>
+
+<p><img class="img-responsive"  src="{% static "img/onas_info1.png" %}"></p>
+
+<h2 class="subpage-h2 blue-line">Dlaczego Verba Legal?</h2>
+<hr class="blue">
+<p><img class="img-responsive"  src="{% static "img/onas_info2.png" %}"></p>
+
+<p class="subpage-intro">
+    Wiemy także, jak ważna jest ochrona danych osobowych i tajemnica informacji - powierzając nam dokumenty zapewniacie sobie Państwo najwyższą dyskrecję i pełną ochronę przed udostępnieniem danych osobom trzecim.
+</p>
+<p class="subpage-intro">
+  <br>Zapraszamy do kontaktu!
+</p>
+
+                    <div class="m-space"></div>
+
+            <div class="m-button-send">
+                <button class="btn btn-primary btn-lg" type="button" onclick="location.href='{% url 'kontakt' %}'">Poznaj wycenę i zamów tłumaczenie</button>
+            </div>
+
+            <div class="m-space"></div>
+
+
+
+    </div>
+
+    <div class="col-md-4">
+
+        <div class="m-zero-margin-right">
+             <img src="{% static "img/flag_de.png" %}" class="m-img-zero img-responsive">
+                <!-- panel -->
+                <div class="m-offer-box m-de">
+                  <div class="m-line-1"></div>
+                  <div class="m-line-2">
+                    <h3 class="m-h3">Tłumaczenia<br><span class="m-red">Język niemiecki</span></h3>
+                  </div>
+                  <div class="m-line-3">
+                    Tłumaczenia tekstów prawnych, prawniczych
+                    <br>i biznesowych w języku niemieckim.
+                  </div>
+                  <div class="m-line-4">
+                    <button type="button" class="btn m-button" onclick="location.href='{% url 'kontakt' %}'">zobacz ofertę</button>
+                  </div>
+                </div>
+                <!-- end panel -->
+          </div>
+
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}

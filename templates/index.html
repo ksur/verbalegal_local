@@ -1,0 +1,167 @@
+{% extends "layout.html" %}
+{% load static %}
+
+{% block content %}
+
+  <div class="container m-offer">
+    <div class="row">
+      <div class="col-md-12">
+        <img src="{% static "img/flag_de.png" %}" class="m-img-zero img-responsive">
+        <!-- panel -->
+        <div class="m-offer-box m-de">
+          <div class="m-line-1"></div>
+          <div class="m-line-2">
+            <h3 class="m-h3">Tłumaczenia <span class="m-red">Język niemiecki</span></h3>
+          </div>
+          <div class="m-line-3">
+            Tłumaczenia tekstów prawnych, prawniczych i biznesowych w języku niemieckim.
+          </div>
+          <div class="m-line-4">
+            <button type="button" class="btn m-button" onclick="location.href='{% url 'oferta' %}'">zobacz ofertę</button>
+          </div>
+        </div>
+        <!-- end panel -->
+      </div>
+    </div>
+  </div>
+
+  <div class="container m-steps">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="m-h4">Zobacz, jakie to proste</h4>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8">
+            <img src="{% static "img/step1.png" %}" class="m-icon img-responsive">
+            <div class="m-icon-slogan">Poznaj pakiet i wybierz szacunkową wycenę</div>
+          </div>
+          <div class="col-md-2"><img src="{% static "img/arrow.png" %}" class="m-icon-2 hidden-sm hidden-xs"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8"><img src="{% static "img/step2.png" %}" class="m-icon img-responsive">
+            <div class="m-icon-slogan">Poczekaj na zatwierdzenie zlecenia</div>
+          </div>
+          <div class="col-md-2"><img src="{% static "img/arrow.png" %}" class="m-icon-2 hidden-sm hidden-xs"></div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="col-md-2"></div>
+          <div class="col-md-8"><img src="{% static "img/step3.png" %}" class="m-icon img-responsive">
+            <div class="m-icon-slogan">Korzystaj z przetłumaczonego dokumentu</div>
+          </div>
+          <div class="col-md-2"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container m-boxes">
+    <div class="row">
+      <div class="col-md-8 m-zero-margin-left">
+        <div class="m-box-1">
+          <img src="{% static "img/icon-pen.png" %}" class="m-img-right img-responsive">
+          <h5 class="m-h5">Dlaczego wart pracować z nami?</h5>
+
+          <div class="m-box-intro m-FAS-basic">Gwarantujemy Państwu wysoką jakość wykonywanych tłumaczeń prawniczych, na którą składają się takie czynniki jak:</div>
+
+          <div>
+            <div class="row">
+              <div class="col-md-6">
+                <ul class="m-ul-dot">
+                  <li class="m-color-grey-light">wykształcenie i doświadczenie prawnicze tłumaczy</li>
+                  <li class="m-color-blue">wykształcenie i doświadczenie językowe tłumaczy</li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <ul class="m-ul-dot">
+                  <li class="m-color-blue">zgodność tłumaczeń z realiami funkcjonowania firm</li>
+                  <li class="m-color-grey-light">solidność i profesjonalizm tłumaczy
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 m-zero-margin-right">
+        <div class="m-box-2">
+          <h6 class="m-h6">Aktualności</h6>
+          <div class="hr-blog-line"></div>
+            <div class="m-blog-www-title"><a href="http://verbalegal.pl/blog/niemieckie-ustawy-i-rozporzadzenia-elektroniczna-baza-aktow-prawnych-de-en/">Baza aktów prawnych</a></div>
+          <div class="m-blog-www-intro">Nie tylko prawnicy, ale również tłumacze powinni, w pewnych sytuacjach, korzystać z tekstów niemieckich ustaw czy rozporządzeń ...</div>
+          <div class="hr-blog-line"></div>
+            <div class="m-blog-www-title"><a href="http://verbalegal.pl/blog/tlumaczenie-jako-przedmiot-prawa-autorskiego/">Tłumaczenie jako przedmiot prawa autorskiego</a></div>
+          <div class="m-blog-www-intro">Przedmiotem prawa autorskiego w Polsce jest utwór (dzieło), zdefiniowany w Ustawie o prawie autorskim i prawach pokrewnych ...
+            </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container m-boxes-2">
+    <div class="row">
+      <div class="col-md-8 m-zero-margin-left">
+        <div class="m-box-3">
+          <img src="{% static "img/icon-doc.png" %}" class="m-img-right img-responsive">
+          <h5 class="m-h5">Jakie dokumenty tłumaczymy?</h5>
+
+          <div class="m-box-intro m-FAS-basic">Świadczymy usługi w zakresie takich dokumentów jak:</div>
+
+          <div class="row">
+            <div class="col-md-4">
+
+              <ul class="m-ul-v">
+                <li>umowy</li>
+                <li>pozwy</li>
+                <li>nakazy zapłaty</li>
+                <li>wyroki</li>
+              </ul>
+
+            </div>
+            <div class="col-md-4">
+              <ul class="m-ul-v">
+                <li>umowy</li>
+                <li>pozwy</li>
+                <li>nakazy zapłaty</li>
+                <li>wyroki</li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="m-ul-v">
+                <li>umowy</li>
+                <li>pozwy</li>
+                <li>nakazy zapłaty</li>
+                <li>wyroki</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-md-4 m-zero-margin-right">
+        <div class="m-box-4">
+          <h6 class="m-h6-blue">Verba Legal</h6>
+          <div class="hr-line"></div>
+          <p class="m-p-line-bigger">ul. Litewska 6</p>
+          <p class="m-p-line-bigger">51-354 Wrocław</p>
+          <p class="m-p-line-bigger">hello@verbalegal.pl</p>
+          <p class="m-p-line-light m-padding-top-15">nr rachunku bankowego:</p>
+          <p class="m-p-line-bigger">80 1050 1575 1000 0091 4300 6360</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
