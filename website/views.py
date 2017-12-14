@@ -73,7 +73,7 @@ def wyslij(request):
 
         msg = EmailMessage(subject, html_body, from_email=from_email, to=[to])
         msg.content_subtype = 'html'
-        #msg.attach(plik.name, plik.read(), plik.content_type())
+        msg.attach(plik.name, plik.read(), plik.content_type())
         msg.send()
 
     except BaseException as e:

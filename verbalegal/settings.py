@@ -130,6 +130,6 @@ EMAIL_USE_SSL = True
 EMAIL_HOST = 'smtp.webfaction.com'
 EMAIL_PORT = 465
 EMAIL_HOST_USER = 'hello_verbalegal'
-EMAIL_HOST_PASSWORD = 'mysleotobie'
+EMAIL_HOST_PASSWORD = '2De-6fB-nma-h7a'
 DEFAULT_FROM_EMAIL = 'hello@verbalegal.pl'
 DEFAULT_TO_EMAIL = 'krzysztof.surowiecki@gmail.com'
